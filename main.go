@@ -25,7 +25,7 @@ func main() {
 	r := gin.Default()
 	r.POST("/documents", createDocumentsEndpoint)
 	r.POST("/url", LoadDataFromURL)
-	//r.GET("/search", searchEndpoint)
+	r.POST("/search", searchData)
 	if err = r.Run(":8000"); err != nil {
 		log.Fatal(err)
 	}
